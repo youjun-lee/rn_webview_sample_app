@@ -12,6 +12,7 @@
   "dependencies": {
     "@react-navigation/native": "^6.1.17",
     "@react-navigation/stack": "^6.3.29",
+    "@tosspayments/widget-sdk-react-native": "^1.2.7",
     "react": "18.2.0",
     "react-native": "0.74.1",
     "react-native-gesture-handler": "^2.16.2",
