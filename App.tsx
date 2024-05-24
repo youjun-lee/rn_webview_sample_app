@@ -5,7 +5,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import {ConvertUrl} from "@tosspayments/widget-sdk-react-native/src/utils/convertUrl"
 const HomeScreen = ({ navigation }) => {
-  const [url, setUrl] = useState('http://52.78.198.128/sample/');
+  const [url, setUrl] = useState('');
 
   return (
     <View style={styles.container}>
@@ -34,7 +34,6 @@ const WebViewScreen = ({ route }) => {
 
   const handleShouldStartLoadWithRequest = (navState) => {
     const { url: newUrl } = navState;
-    console.log('areyou here?')
     if (newUrl.startsWith('http://') || newUrl.startsWith('https://')) {
       console.log('URL starts with http or https:', newUrl);
       return true; // URL이 유효한 경우 true 반환
