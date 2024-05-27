@@ -37,15 +37,11 @@ const WebViewScreen = ({ route }) => {
     if (newUrl.startsWith('http://') || newUrl.startsWith('https://')) {
       console.log('URL starts with http or https:', newUrl);
       return true; // URL이 유효한 경우 true 반환
-    }else if (newUrl.startsWith('intent://')) {
+    }else {
       console.log('Handling intent URL:', newUrl);
       urlConverter(newUrl)
       return false; // intent URL은 WebView에서 로드하지 않음
-    } else {
-      console.log('URL does not start with http or https:', newUrl);
-      handleInvalidUrl(newUrl); // 유효하지 않은 URL에 대한 함수 호출
-      return false;
-    }
+    } 
   };
 
 
